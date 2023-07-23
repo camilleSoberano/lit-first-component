@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <link rel="stylesheet" href="./src/index.css" />
+    <script type="module" src="/src/user-card.ts"></script>
+    <style>
+      body {
+        --gen-margin:1rem;
+        --primary-color:#1F618D;
+        --primary-text-color:#ECF0F1;
+        display:flex;
+        gap:1rem;
+        flex-direction:column;
+      }
+      img {
+        width:80%;
+        height:80%;
+      }
+      user-card::part(logo-bg){
+        
+        background-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+   <user-card name="George" header="Hola" subHeader="Mi nombre es:" has-logo=true>
+    <img slot="logo" src="/logo.png"/>
+   </user-card>
+   
+  </body>
+</html>
